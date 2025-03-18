@@ -1,0 +1,134 @@
+/* Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #87CEEB, #1E90FF);
+}
+
+.container {
+    width: 400px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: height 0.6s ease-in-out;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    color: #06283D;
+    padding-left: 10px;
+}
+
+.search-box input::placeholder {
+    color: rgba(6, 40, 61, 0.7);
+}
+
+.search-box button {
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: #06283D;
+    color: #fff;
+}
+
+.weather-box {
+    display: none;
+    margin-top: 20px;
+}
+
+.weather-box img {
+    width: 50%;
+}
+
+.weather-box .temperature {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #06283D;
+}
+
+.weather-box .description {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #06283D;
+}
+
+.weather-details {
+    display: none;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.weather-details div {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.weather-details span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #06283D;
+}
+
+.not-found {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.not-found img {
+    width: 60%;
+}
+
+.not-found p {
+    font-size: 1.2rem;
+    color: #06283D;
+}
+
+.api-status {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #06283D;
+}
+
+.fadeIn {
+    animation: fadeIn 0.5s forwards ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
